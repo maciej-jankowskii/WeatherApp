@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WeatherApp</title>
+		<script
+			src="https://kit.fontawesome.com/ebfdf0430f.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav-logo">
+				<p>Weather<span class="blue">App</span></p>
+			</div>
+			<div class="nav-items">
+				<a href="#" class="nav-item blue">Home</a>
+				<a href="#weather" class="nav-item">Weather</a>
+				<a href="#info" class="nav-item">Info</a>
+			</div>
+		</nav>
+
+		<section class="main">
+			<div class="main-box">
+				<h1>Weather<span class="blue">App</span></h1>
+				<h2>How's the weather in your city?</h2>
+				<a href="#weather">check weather</a>
+			</div>
+
+			<div class="weather-container" id="weather">
+				<div class="weather-top">
+					<div class="weather-info">
+						<div>
+							<h3 class="city-name"></h3>
+							<input type="text" placeholder="Name of city..." /><button>
+								Send
+							</button>
+							<p class="warning"></p>
+						</div>
+						<img src="./img/unknown.png" alt="" class="photo" />
+					</div>
+				</div>
+
+				<div class="weather-bottom">
+					<div class="weather-headings">
+						<p>Weather:</p>
+						<p>Temperature:</p>
+						<p>Humidity:</p>
+						<p>Wind:</p>
+					</div>
+					<div class="weather-details">
+						<p class="weather"></p>
+						<p class="temperature"></p>
+						<p class="humidity">%</p>
+						<p class="wind"></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer" id="info">
+			<p>&copy; WeatherApp 2024</p>
+            <p>The website uses API https://openweathermap.org/</p>
+		</footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
